@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mk-test';
+constructor(public _http: HttpClient) {}
+submit() {
+  this._http.post(`https://figuektqni.execute-api.us-west-1.amazonaws.com')
+}
 }
